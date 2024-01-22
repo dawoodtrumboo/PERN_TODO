@@ -5,10 +5,11 @@ import ListBox from './components/ListBox'
 
 function App() {
   const [todoList, setTodoList] =useState([])
+  const baseURL = import.meta.env.VITE_SERVER_URL
 
   const getTodoList = async ()=>{
     try {
-        const response = await fetch(`http://localhost:8000/todos`)
+        const response = await fetch(`${baseURL}/todos`)
         if(response.ok){
             const result = await response.json()
             console.log(result)

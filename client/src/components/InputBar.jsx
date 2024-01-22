@@ -2,10 +2,11 @@ import React, { useRef } from 'react'
 
 const InputBar = ({setTodoList,rerender}) => {
     const inputRef = useRef(null)
+    const baseURL = import.meta.env.VITE_SERVER_URL
 
     const addItem = async()=>{
         try {
-            const response = await fetch(`http://localhost:8000/todos`,{
+            const response = await fetch(`${baseURL}/todos`,{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'

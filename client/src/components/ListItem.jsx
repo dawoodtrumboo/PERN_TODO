@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 const ListItem = ({id,label,setTodoList,iscompeleted}) => {
 
     const labelRef = useRef(null)
-
+    const baseURL = import.meta.env.VITE_SERVER_URL
     const [status, setStatus] = useState(iscompeleted)
     const [isEditable,setIsEditable] = useState(false)
     const handleComplete = async (value)=>{
@@ -14,7 +14,7 @@ const ListItem = ({id,label,setTodoList,iscompeleted}) => {
         console.log(bodyData,id,iscompeleted)
         
         try {
-            const response = await fetch(`http://localhost:8000/todos/${id}`,{
+            const response = await fetch(`${baseURL}/todos/${id}`,{
                 method:'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ const ListItem = ({id,label,setTodoList,iscompeleted}) => {
 
     const handleDelete = async ()=>{
         try {
-            const response = await fetch(`http://localhost:8000/todos/${id}`,{
+            const response = await fetch(`${baseURL}/todos/${id}`,{
                 method:'DELETE'
             })
             if(response.ok){
@@ -47,7 +47,7 @@ const ListItem = ({id,label,setTodoList,iscompeleted}) => {
 
     const handleEdit = async ()=>{
         try {
-            const response = await fetch(`http://localhost:8000/todos/${id}`,{
+            const response = await fetch(`${baseURL}/todos/${id}`,{
                 method:'PUT',
                 headers: {
                     'Content-Type': 'application/json'
