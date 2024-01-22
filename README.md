@@ -38,7 +38,7 @@ To run this application locally, follow these steps:
 
 4. ***Install Dependencies Navigate to both the client and server directories and install the dependencies:***
     ```
-            cd client
+        cd client
         npm install
 
         cd ../server
