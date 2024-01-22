@@ -5,7 +5,7 @@ const connectionString =process.env.DB_CONNECTION_STRING;
 const pool = new Pool({
     connectionString: connectionString,
     ssl: {
-        rejectUnauthorized: false, // Set this to false only for development/testing
+        rejectUnauthorized: false, 
     },
     // user: "todolist_gxih_user",
     // password:"j6FmrT5pCtZuhjpHM4BlW3Q5k07tS4yI",
