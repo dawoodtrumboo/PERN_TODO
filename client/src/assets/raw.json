@@ -1,0 +1,21 @@
+[
+    {
+        "match": "Match 1",
+        "teams": ["TeamA", "TeamB"],
+        "date": "2024-03-01",
+        "time": "18:00"
+    },
+    {
+        "match": "Match 2",
+        "teams": ["TeamC", "TeamD"],
+        "date": "2024-03-02",
+        "time": "20:30"
+    },
+    {
+        "match": "Match 3",
+        "teams": ["TeamE", "TeamF"],
+        "date": "2024-03-03",
+        "time": "15:45"
+    }
+    // Add more fixtures as needed
+]
